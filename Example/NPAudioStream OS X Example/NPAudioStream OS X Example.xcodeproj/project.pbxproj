@@ -92,10 +92,30 @@
 			path = ../../..;
 			sourceTree = "<group>";
 		};
+		A5B2A1171B85E53B001E2AC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF67061B85D4C600FEA719 /* Storyboard.storyboard */,
+				A5FF67081B85D4F100FEA719 /* RootViewController.h */,
+				A5FF67091B85D4F100FEA719 /* RootViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A5B2A1181B85E555001E2AC0 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B4091B64F26800555059 /* NPAudioStream */,
+			);
+			name = Vendor;
+			path = "NPAudioStream OS X Example";
+			sourceTree = "<group>";
+		};
 		A5B2B3B81B64E77200555059 = {
 			isa = PBXGroup;
 			children = (
-				A5B2B3C31B64E77200555059 /* NPAudioStream OS X Example */,
+				A5B2B3C31B64E77200555059 /* Classes */,
+				A5B2A1181B85E555001E2AC0 /* Vendor */,
 				A5B2B3D71B64E77200555059 /* NPAudioStream OS X ExampleTests */,
 				A5B2B40F1B64F33000555059 /* Frameworks */,
 				A5B2B3C21B64E77200555059 /* Products */,
@@ -111,18 +131,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5B2B3C31B64E77200555059 /* NPAudioStream OS X Example */ = {
+		A5B2B3C31B64E77200555059 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				A5B2B3C61B64E77200555059 /* AppDelegate.h */,
 				A5B2B3C71B64E77200555059 /* AppDelegate.m */,
-				A5FF67061B85D4C600FEA719 /* Storyboard.storyboard */,
-				A5FF67081B85D4F100FEA719 /* RootViewController.h */,
-				A5FF67091B85D4F100FEA719 /* RootViewController.m */,
-				A5B2B3CB1B64E77200555059 /* Images.xcassets */,
-				A5B2B4091B64F26800555059 /* NPAudioStream */,
+				A5B2A1171B85E53B001E2AC0 /* View */,
 				A5B2B3C41B64E77200555059 /* Supporting Files */,
 			);
+			name = Classes;
 			path = "NPAudioStream OS X Example";
 			sourceTree = "<group>";
 		};
@@ -131,6 +148,7 @@
 			children = (
 				A5B0DE861B85DD5000BB8D36 /* keys.json */,
 				A5FF670B1B85D60E00FEA719 /* mixtape-151.json */,
+				A5B2B3CB1B64E77200555059 /* Images.xcassets */,
 				A5B2B3C51B64E77200555059 /* Info.plist */,
 				A5B2B3C91B64E77200555059 /* main.m */,
 			);

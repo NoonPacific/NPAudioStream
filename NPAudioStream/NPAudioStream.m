@@ -278,10 +278,10 @@ NSString *kDurationKey          = @"duration";
                               
                               _player = [[NPQueuePlayer alloc] init];
                               _player.delegate = self;
+                              _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
                               _player.allowsExternalPlayback = NO;
 #endif
-                              _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
                           }
                           
                           [self initTimeObservers];
@@ -647,8 +647,6 @@ NSString *kDurationKey          = @"duration";
 }
 
 #pragma mark - Background Task Manager {
-
-
 
 - (void)startBackgroundTask {
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)

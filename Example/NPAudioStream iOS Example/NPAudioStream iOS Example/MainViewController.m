@@ -38,12 +38,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *keyDict = [self JSONObjctWithFileName:@"keys"];
+    NSDictionary *keyDict = [self JSONObjectWithFileName:@"keys"];
     soundcloudToken = [keyDict objectForKey:@"soundcloud_token"];
     
     NSAssert(soundcloudToken.length != 0, @"A valid SoundCloud token is required to stream this playlist. First, generate a valid SoundCloud token from the SoundCloud developer site. Then add the token to the keys.json file in the project root.");
 
-    tracks = [self JSONObjctWithFileName:@"mixtape-151"];
+    tracks = [self JSONObjectWithFileName:@"mixtape-151"];
     
     audioStream = [NPAudioStream new];
     [audioStream setDelegate:self];
@@ -244,7 +244,7 @@
 
 #pragma mark - Utility
 
-- (id)JSONObjctWithFileName:(NSString *)fileName {
+- (id)JSONObjectWithFileName:(NSString *)fileName {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     NSError* error = nil;

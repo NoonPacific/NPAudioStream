@@ -1,0 +1,72 @@
+[
+        {
+        "artist" : "RAEKO feat. Mating Ritual",
+        "soundcloud_permalink_url" : "http://soundcloud.com/raekomusic/everybody-knows-ft-mating-ritual",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/216878983/stream",
+        "title" : "Everybody Knows",
+        "track_number" : 1,
+    },
+        {
+        "artist" : "FLAUSEN",
+        "soundcloud_permalink_url" : "http://soundcloud.com/tdg_music/flausen-ft-ben-cocks-fly-away-for-a-summer-achtabahn-mix",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/215647717/stream",
+        "title" : "Fly Away For A Summer",
+        "track_number" : 2,
+    },
+        {
+        "artist" : "Sol",
+        "soundcloud_permalink_url" : "http://soundcloud.com/solzilla/aint-gon-stop",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/218064667/stream",
+        "title" : "Ain't Gon' Stop",
+        "track_number" : 3,
+    },
+        {
+        "artist" : "Sunni Colón (Valleyz remix)",
+        "soundcloud_permalink_url" : "http://soundcloud.com/valleyz/sunni-colon-water-valleyz-flip",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/206986247/stream",
+        "title" : "Water",
+        "track_number" : 4,
+    },
+        {
+        "artist" : "Free n Losh feat. Bethea",
+        "soundcloud_permalink_url" : "http://soundcloud.com/free-n-losh/free-n-losh-rose-ft-bethea-1",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/218062009/stream",
+        "title" : "Rose",
+        "track_number" : 5,
+    },
+        {
+        "artist" : "The Notorious B.I.G. (Zebra Safari remix)",
+        "soundcloud_permalink_url" : "http://soundcloud.com/zebra-safari/can-i-get-witcha-zebra-safari-remake",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/218408693/stream",
+        "title" : "Can I Get Witcha",
+        "track_number" : 6,
+    },
+        {
+        "artist" : "POOLCLVB feat. Natalie Conway",
+        "soundcloud_permalink_url" : "http://soundcloud.com/poolclvb/move-me",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/216971125/stream",
+        "title" : "Move Me",
+        "track_number" : 7,
+    },
+        {
+        "artist" : "Terence Ryan",
+        "soundcloud_permalink_url" : "http://soundcloud.com/3qtr/champain",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/208529181/stream",
+        "title" : "Champain",
+        "track_number" : 8,
+    },
+        {
+        "artist" : "Flamingo Pier",
+        "soundcloud_permalink_url" : "http://soundcloud.com/flamingopier/fp-waiting-for-you",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/218037886/stream",
+        "title" : "Waiting For You",
+        "track_number" : 9,
+    },
+        {
+        "artist" : "Tom of Finland",
+        "soundcloud_permalink_url" : "http://soundcloud.com/razor-n-tape/tom-of-finland-summerjam",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/210613646/stream",
+        "title" : "Summerjam",
+        "track_number" : 10,
+    }
+]

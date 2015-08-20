@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5A243331B81BA8B0044E872 /* NSURL+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A243311B81BA8B0044E872 /* NSURL+Extensions.m */; };
+		A5A243361B81BAF20044E872 /* NSMutableArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A243351B81BAF20044E872 /* NSMutableArray+Extensions.m */; };
+		A5A2433C1B81BE1E0044E872 /* UIAlertView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A2433B1B81BE1E0044E872 /* UIAlertView+Extensions.m */; };
+		A5A2433E1B81C1800044E872 /* mixtape-151.json in Resources */ = {isa = PBXBuildFile; fileRef = A5A2433D1B81C1800044E872 /* mixtape-151.json */; };
+		A5A243441B81DA710044E872 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A243431B81DA710044E872 /* MainViewController.m */; };
+		A5B0DE851B85DCB100BB8D36 /* keys.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B0DE841B85DCB100BB8D36 /* keys.json */; };
+		A5B2B3921B64E6FD00555059 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B3911B64E6FD00555059 /* main.m */; };
+		A5B2B3951B64E6FD00555059 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B3941B64E6FD00555059 /* AppDelegate.m */; };
+		A5B2B39E1B64E6FD00555059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B2B39C1B64E6FD00555059 /* Main.storyboard */; };
+		A5B2B3A01B64E6FD00555059 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B2B39F1B64E6FD00555059 /* Images.xcassets */; };
+		A5B2B3A31B64E6FD00555059 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B2B3A11B64E6FD00555059 /* LaunchScreen.xib */; };
+		A5B2B3AF1B64E6FD00555059 /* NPAudioStream_iOS_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B3AE1B64E6FD00555059 /* NPAudioStream_iOS_ExampleTests.m */; };
+		A5B2B3FA1B64F1E700555059 /* NPAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B3EE1B64F1E700555059 /* NPAudioStream.m */; };
+		A5B2B3FB1B64F1E700555059 /* NPPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B3F01B64F1E700555059 /* NPPlayerItem.m */; };
+		A5B2B3FC1B64F1E700555059 /* NPQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B3F21B64F1E700555059 /* NPQueuePlayer.m */; };
+		A5B2B40B1B64F2E700555059 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2B40A1B64F2E700555059 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5B2B3A91B64E6FD00555059 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B2B3841B64E6FD00555059 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5B2B38B1B64E6FD00555059;
+			remoteInfo = "NPAudioStream iOS Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5A243301B81BA8B0044E872 /* NSURL+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Extensions.h"; path = "NPAudioStream/Categories/NSURL+Extensions.h"; sourceTree = "<group>"; };
+		A5A243311B81BA8B0044E872 /* NSURL+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Extensions.m"; path = "NPAudioStream/Categories/NSURL+Extensions.m"; sourceTree = "<group>"; };
+		A5A243341B81BAF20044E872 /* NSMutableArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Extensions.h"; path = "NPAudioStream/Categories/NSMutableArray+Extensions.h"; sourceTree = "<group>"; };
+		A5A243351B81BAF20044E872 /* NSMutableArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Extensions.m"; path = "NPAudioStream/Categories/NSMutableArray+Extensions.m"; sourceTree = "<group>"; };
+		A5A2433A1B81BE1E0044E872 /* UIAlertView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Extensions.h"; path = "NPAudioStream/Categories/UIAlertView+Extensions.h"; sourceTree = "<group>"; };
+		A5A2433B1B81BE1E0044E872 /* UIAlertView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Extensions.m"; path = "NPAudioStream/Categories/UIAlertView+Extensions.m"; sourceTree = "<group>"; };
+		A5A2433D1B81C1800044E872 /* mixtape-151.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "mixtape-151.json"; path = "../../Resources/mixtape-151.json"; sourceTree = "<group>"; };
+		A5A243421B81DA700044E872 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A5A243431B81DA710044E872 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A5B0DE841B85DCB100BB8D36 /* keys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = keys.json; path = ../../../keys.json; sourceTree = "<group>"; };
+		A5B2B38C1B64E6FD00555059 /* NPAudioStream iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NPAudioStream iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B2B3901B64E6FD00555059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B2B3911B64E6FD00555059 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5B2B3931B64E6FD00555059 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5B2B3941B64E6FD00555059 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5B2B39D1B64E6FD00555059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5B2B39F1B64E6FD00555059 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A5B2B3A21B64E6FD00555059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A5B2B3A81B64E6FD00555059 /* NPAudioStream iOS ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NPAudioStream iOS ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B2B3AD1B64E6FD00555059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B2B3AE1B64E6FD00555059 /* NPAudioStream_iOS_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPAudioStream_iOS_ExampleTests.m; sourceTree = "<group>"; };
+		A5B2B3ED1B64F1E700555059 /* NPAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPAudioStream.h; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.h; sourceTree = "<absolute>"; };
+		A5B2B3EE1B64F1E700555059 /* NPAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPAudioStream.m; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.m; sourceTree = "<absolute>"; };
+		A5B2B3EF1B64F1E700555059 /* NPPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPPlayerItem.h; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.h; sourceTree = "<absolute>"; };
+		A5B2B3F01B64F1E700555059 /* NPPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPPlayerItem.m; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.m; sourceTree = "<absolute>"; };
+		A5B2B3F11B64F1E700555059 /* NPQueuePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPQueuePlayer.h; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.h; sourceTree = "<absolute>"; };
+		A5B2B3F21B64F1E700555059 /* NPQueuePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPQueuePlayer.m; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.m; sourceTree = "<absolute>"; };
+		A5B2B40A1B64F2E700555059 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5B2B3891B64E6FD00555059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B2B40B1B64F2E700555059 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B2B3A51B64E6FD00555059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5A2432F1B81B3720044E872 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B3F31B64F1E700555059 /* NPAudioStream */,
+			);
+			name = Vendor;
+			path = "NPAudioStream iOS Example";
+			sourceTree = "<group>";
+		};
+		A5A243321B81BA8B0044E872 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A5A243301B81BA8B0044E872 /* NSURL+Extensions.h */,
+				A5A243311B81BA8B0044E872 /* NSURL+Extensions.m */,
+				A5A243341B81BAF20044E872 /* NSMutableArray+Extensions.h */,
+				A5A243351B81BAF20044E872 /* NSMutableArray+Extensions.m */,
+				A5A2433A1B81BE1E0044E872 /* UIAlertView+Extensions.h */,
+				A5A2433B1B81BE1E0044E872 /* UIAlertView+Extensions.m */,
+			);
+			name = Categories;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A5A243371B81BB590044E872 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B39C1B64E6FD00555059 /* Main.storyboard */,
+				A5A243421B81DA700044E872 /* MainViewController.h */,
+				A5A243431B81DA710044E872 /* MainViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A5B2B3831B64E6FD00555059 = {
+			isa = PBXGroup;
+			children = (
+				A5B2B38E1B64E6FD00555059 /* Classes */,
+				A5A2432F1B81B3720044E872 /* Vendor */,
+				A5B2B3AB1B64E6FD00555059 /* NPAudioStream iOS ExampleTests */,
+				A5B2B40E1B64F30100555059 /* Frameworks */,
+				A5B2B38D1B64E6FD00555059 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5B2B38D1B64E6FD00555059 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B38C1B64E6FD00555059 /* NPAudioStream iOS Example.app */,
+				A5B2B3A81B64E6FD00555059 /* NPAudioStream iOS ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5B2B38E1B64E6FD00555059 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B3931B64E6FD00555059 /* AppDelegate.h */,
+				A5B2B3941B64E6FD00555059 /* AppDelegate.m */,
+				A5A243371B81BB590044E872 /* Views */,
+				A5B2B38F1B64E6FD00555059 /* Supporting Files */,
+			);
+			name = Classes;
+			path = "NPAudioStream iOS Example";
+			sourceTree = "<group>";
+		};
+		A5B2B38F1B64E6FD00555059 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5B0DE841B85DCB100BB8D36 /* keys.json */,
+				A5A2433D1B81C1800044E872 /* mixtape-151.json */,
+				A5B2B39F1B64E6FD00555059 /* Images.xcassets */,
+				A5B2B3A11B64E6FD00555059 /* LaunchScreen.xib */,
+				A5B2B3901B64E6FD00555059 /* Info.plist */,
+				A5B2B3911B64E6FD00555059 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5B2B3AB1B64E6FD00555059 /* NPAudioStream iOS ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B3AE1B64E6FD00555059 /* NPAudioStream_iOS_ExampleTests.m */,
+				A5B2B3AC1B64E6FD00555059 /* Supporting Files */,
+			);
+			path = "NPAudioStream iOS ExampleTests";
+			sourceTree = "<group>";
+		};
+		A5B2B3AC1B64E6FD00555059 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B3AD1B64E6FD00555059 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5B2B3F31B64F1E700555059 /* NPAudioStream */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B3ED1B64F1E700555059 /* NPAudioStream.h */,
+				A5B2B3EE1B64F1E700555059 /* NPAudioStream.m */,
+				A5B2B3EF1B64F1E700555059 /* NPPlayerItem.h */,
+				A5B2B3F01B64F1E700555059 /* NPPlayerItem.m */,
+				A5B2B3F11B64F1E700555059 /* NPQueuePlayer.h */,
+				A5B2B3F21B64F1E700555059 /* NPQueuePlayer.m */,
+				A5A243321B81BA8B0044E872 /* Categories */,
+			);
+			name = NPAudioStream;
+			path = ../../../NPAudioStream;
+			sourceTree = "<group>";
+		};
+		A5B2B40E1B64F30100555059 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2B40A1B64F2E700555059 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5B2B38B1B64E6FD00555059 /* NPAudioStream iOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B2B3B21B64E6FD00555059 /* Build configuration list for PBXNativeTarget "NPAudioStream iOS Example" */;
+			buildPhases = (
+				A5B2B3881B64E6FD00555059 /* Sources */,
+				A5B2B3891B64E6FD00555059 /* Frameworks */,
+				A5B2B38A1B64E6FD00555059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NPAudioStream iOS Example";
+			productName = "NPAudioStream iOS Example";
+			productReference = A5B2B38C1B64E6FD00555059 /* NPAudioStream iOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5B2B3A71B64E6FD00555059 /* NPAudioStream iOS ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B2B3B51B64E6FD00555059 /* Build configuration list for PBXNativeTarget "NPAudioStream iOS ExampleTests" */;
+			buildPhases = (
+				A5B2B3A41B64E6FD00555059 /* Sources */,
+				A5B2B3A51B64E6FD00555059 /* Frameworks */,
+				A5B2B3A61B64E6FD00555059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5B2B3AA1B64E6FD00555059 /* PBXTargetDependency */,
+			);
+			name = "NPAudioStream iOS ExampleTests";
+			productName = "NPAudioStream iOS ExampleTests";
+			productReference = A5B2B3A81B64E6FD00555059 /* NPAudioStream iOS ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5B2B3841B64E6FD00555059 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Noon Pacific";
+				TargetAttributes = {
+					A5B2B38B1B64E6FD00555059 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					A5B2B3A71B64E6FD00555059 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = A5B2B38B1B64E6FD00555059;
+					};
+				};
+			};
+			buildConfigurationList = A5B2B3871B64E6FD00555059 /* Build configuration list for PBXProject "NPAudioStream iOS Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5B2B3831B64E6FD00555059;
+			productRefGroup = A5B2B38D1B64E6FD00555059 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5B2B38B1B64E6FD00555059 /* NPAudioStream iOS Example */,
+				A5B2B3A71B64E6FD00555059 /* NPAudioStream iOS ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5B2B38A1B64E6FD00555059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A2433E1B81C1800044E872 /* mixtape-151.json in Resources */,
+				A5B0DE851B85DCB100BB8D36 /* keys.json in Resources */,
+				A5B2B39E1B64E6FD00555059 /* Main.storyboard in Resources */,
+				A5B2B3A31B64E6FD00555059 /* LaunchScreen.xib in Resources */,
+				A5B2B3A01B64E6FD00555059 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B2B3A61B64E6FD00555059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5B2B3881B64E6FD00555059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B2B3FC1B64F1E700555059 /* NPQueuePlayer.m in Sources */,
+				A5B2B3951B64E6FD00555059 /* AppDelegate.m in Sources */,
+				A5A243361B81BAF20044E872 /* NSMutableArray+Extensions.m in Sources */,
+				A5B2B3FB1B64F1E700555059 /* NPPlayerItem.m in Sources */,
+				A5A243331B81BA8B0044E872 /* NSURL+Extensions.m in Sources */,
+				A5B2B3921B64E6FD00555059 /* main.m in Sources */,
+				A5A243441B81DA710044E872 /* MainViewController.m in Sources */,
+				A5A2433C1B81BE1E0044E872 /* UIAlertView+Extensions.m in Sources */,
+				A5B2B3FA1B64F1E700555059 /* NPAudioStream.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B2B3A41B64E6FD00555059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B2B3AF1B64E6FD00555059 /* NPAudioStream_iOS_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5B2B3AA1B64E6FD00555059 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5B2B38B1B64E6FD00555059 /* NPAudioStream iOS Example */;
+			targetProxy = A5B2B3A91B64E6FD00555059 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5B2B39C1B64E6FD00555059 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5B2B39D1B64E6FD00555059 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5B2B3A11B64E6FD00555059 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5B2B3A21B64E6FD00555059 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5B2B3B01B64E6FD00555059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5B2B3B11B64E6FD00555059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5B2B3B31B64E6FD00555059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NPAudioStream iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5B2B3B41B64E6FD00555059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NPAudioStream iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A5B2B3B61B64E6FD00555059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NPAudioStream iOS ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NPAudioStream iOS Example.app/NPAudioStream iOS Example";
+			};
+			name = Debug;
+		};
+		A5B2B3B71B64E6FD00555059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NPAudioStream iOS ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NPAudioStream iOS Example.app/NPAudioStream iOS Example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5B2B3871B64E6FD00555059 /* Build configuration list for PBXProject "NPAudioStream iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B2B3B01B64E6FD00555059 /* Debug */,
+				A5B2B3B11B64E6FD00555059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5B2B3B21B64E6FD00555059 /* Build configuration list for PBXNativeTarget "NPAudioStream iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B2B3B31B64E6FD00555059 /* Debug */,
+				A5B2B3B41B64E6FD00555059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5B2B3B51B64E6FD00555059 /* Build configuration list for PBXNativeTarget "NPAudioStream iOS ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B2B3B61B64E6FD00555059 /* Debug */,
+				A5B2B3B71B64E6FD00555059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5B2B3841B64E6FD00555059 /* Project object */;
+}

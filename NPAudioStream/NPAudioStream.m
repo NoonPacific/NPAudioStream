@@ -28,6 +28,7 @@ NSString *kDurationKey          = @"duration";
 @property (nonatomic) NSURL *currentURL;
 @property (nonatomic, strong) NSArray *shuffledURLs;
 @property (nonatomic, strong, readonly) NSArray *conditionalURLs;
+@property (nonatomic, strong) NPQueuePlayer *player;
 
 @end
 

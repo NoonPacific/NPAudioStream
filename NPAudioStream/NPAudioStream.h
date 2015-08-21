@@ -10,6 +10,14 @@
 #import "NPQueuePlayer.h"
 #import "NPPlayerItem.h"
 
+@class NPAudioStream;
+
+/**
+ `NPAudioStream` primarily augments Apple's `AVAudioQueuePlayer` class to better interface with a networked audio playlist with iPod-style controls.
+ ##Usage Notes
+ Ideally an instance of NPAudioStream is kept as a singular instance within your application (perhaps within a singleton container) to prevent audio skipping.
+ */
+
 typedef NS_ENUM(NSUInteger, NPAudioStreamStatus) {
     NPAudioStreamStatusUnknown = 0,
     NPAudioStreamStatusBuffering = 1,
@@ -28,7 +36,9 @@ typedef NS_ENUM(NSUInteger, NPAudioStreamShuffleMode) {
     NPAudioStreamShuffleModeOn = 1
 };
 
-@class NPAudioStream;
+///---------------------
+/// @name NPAudioStream Delegate
+///---------------------
 
 @protocol NPAudioStreamDelegate <NSObject>
 @optional
@@ -59,13 +69,27 @@ typedef NS_ENUM(NSUInteger, NPAudioStreamShuffleMode) {
 @property (nonatomic, assign, readonly) NPAudioStreamStatus status;
 @property (nonatomic, assign) NPAudioStreamRepeatMode repeatMode;
 @property (nonatomic, assign) NPAudioStreamShuffleMode shuffleMode;
-@property (nonatomic, strong) NPQueuePlayer *player;
+
+
+/**
+ An array of NSURL objects containing stream-ready URLs.
+ @warning All objects in the array must be NSURLs.
+ */
 @property (nonatomic, strong) NSArray *urls;
 @property (nonatomic, readonly) CMTime currentTime;
 @property (nonatomic, readonly) CMTime duration;
 @property (nonatomic, readonly) CMTimeRange loadedTimeRange;
 
+/**
+ Select an item within the `urls` array for playback.
+ @param index The index of the item in the `urls` array to use for playback.
+ */
 - (void)selectIndexForPlayback:(NSUInteger)index;
+
+/**
+ Seek to a specific time (in seconds) of the currently playing track. The seek method is limited by
+ @param index The index of the item in the `urls` array to use for playback.
+ */
 - (void)seekToTimeInSeconds:(CGFloat)seconds;
 - (void)play;
 - (void)pause;

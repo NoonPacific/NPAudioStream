@@ -108,16 +108,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		A5A243371B81BB590044E872 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A5B2B39C1B64E6FD00555059 /* Main.storyboard */,
-				A5A243421B81DA700044E872 /* MainViewController.h */,
-				A5A243431B81DA710044E872 /* MainViewController.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		A5B2B3831B64E6FD00555059 = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +131,11 @@
 		A5B2B38E1B64E6FD00555059 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5B2B39C1B64E6FD00555059 /* Main.storyboard */,
 				A5B2B3931B64E6FD00555059 /* AppDelegate.h */,
 				A5B2B3941B64E6FD00555059 /* AppDelegate.m */,
-				A5A243371B81BB590044E872 /* View */,
+				A5A243421B81DA700044E872 /* MainViewController.h */,
+				A5A243431B81DA710044E872 /* MainViewController.m */,
 				A5B2B38F1B64E6FD00555059 /* Supporting Files */,
 			);
 			name = Classes;
@@ -442,7 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NPAudioStream iOS Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NPAudioStream iOS Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

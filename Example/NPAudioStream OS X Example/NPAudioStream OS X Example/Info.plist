@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>NPAudioSteam</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,7 +27,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015 Noon Pacific. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
-	<string>Storyboard</string>
+	<string>Root</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

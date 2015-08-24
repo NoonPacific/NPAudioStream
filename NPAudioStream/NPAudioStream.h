@@ -1,21 +1,33 @@
+// NPAudioStream.h
 //
-//  NPAudioStream.h
-//  Noon Pacific
+// Copyright (c) 2015 Noon Pacific (http://noonpacific.com)
 //
-//  Created by Alex Givens on 9/22/14.
-//  Copyright (c) 2014-2015 Noon Pacific. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import <AVFoundation/AVFoundation.h>
-#import "NPQueuePlayer.h"
-#import "NPPlayerItem.h"
 
 @class NPAudioStream;
 
 /**
  `NPAudioStream` primarily augments Apple's `AVAudioQueuePlayer` class to better interface with a networked audio playlist with iPod-style controls.
  ##Usage Notes
- Ideally an instance of NPAudioStream is kept as a singular instance within your application (perhaps within a singleton container) to prevent audio skipping.
+ Ideally an instance of NPAudioStream is kept as a singular instance within your application (perhaps within a singleton container) to prevent malfunctioning.
  */
 
 typedef NS_ENUM(NSUInteger, NPAudioStreamStatus) {
@@ -36,11 +48,12 @@ typedef NS_ENUM(NSUInteger, NPAudioStreamShuffleMode) {
     NPAudioStreamShuffleModeOn = 1
 };
 
-///---------------------
-/// @name NPAudioStream Delegate
-///---------------------
+///---------------
+/// @name Delegate
+///---------------
 
 @protocol NPAudioStreamDelegate <NSObject>
+
 @optional
 
 - (void)audioStream:(NPAudioStream *)audioStream didUpdateStatus:(NPAudioStreamStatus)status;
@@ -57,43 +70,119 @@ typedef NS_ENUM(NSUInteger, NPAudioStreamShuffleMode) {
 - (void)audioStream:(NPAudioStream *)audioStream didUpdateTrackLoadedTimeRange:(CMTimeRange)loadedTimeRange;
 - (void)audioStream:(NPAudioStream *)audioStream didFinishSeekingToTime:(CMTime)time;
 
+// TODO: Designate a separate data source protocol for this
 - (BOOL)shouldPrebufferNextTrackForAudioStream:(NPAudioStream *)audioStream;
 
 @end
 
+
+/**
+ An instance of NPAudioStream is a means for playing and controlling an array of remote audio sources.
+ */
 @interface NPAudioStream : NSObject {
     __weak id <NPAudioStreamDelegate> delegate;
 }
 
+///-------------------------
+/// @name Stream Controllers
+///-------------------------
+
+/**
+ The object that acts as the delegate of the audio stream.
+ 
+ The delegate must adopt the NPAudioStreamDelegate protocol. The delegate is not retained.
+ */
 @property (nonatomic, weak) id <NPAudioStreamDelegate> delegate;
+
+/**
+ Returns the status of the audio stream. (read-only)
+ */
 @property (nonatomic, assign, readonly) NPAudioStreamStatus status;
+
+/**
+ The repeat mode for the audio stream.
+ */
 @property (nonatomic, assign) NPAudioStreamRepeatMode repeatMode;
+
+/**
+ The shuffle mode for the audio stream.
+ */
 @property (nonatomic, assign) NPAudioStreamShuffleMode shuffleMode;
 
 
 /**
- An array of NSURL objects containing stream-ready URLs.
- @warning All objects in the array must be NSURLs.
+ An array of NSURL objects pointing towards audio sources.
+ 
+ @warning Must only contain NSURL objects (enforced).
  */
 @property (nonatomic, strong) NSArray *urls;
-@property (nonatomic, readonly) CMTime currentTime;
-@property (nonatomic, readonly) CMTime duration;
-@property (nonatomic, readonly) CMTimeRange loadedTimeRange;
 
 /**
  Select an item within the `urls` array for playback.
+ 
  @param index The index of the item in the `urls` array to use for playback.
  */
 - (void)selectIndexForPlayback:(NSUInteger)index;
 
 /**
- Seek to a specific time (in seconds) of the currently playing track. The seek method is limited by
+ Cycle to the next repeat mode.
+ */
+- (void)incrementRepeatMode;
+
+/**
+ Cycle to the next shuffle mode.
+ */
+- (void)incrementShuffleMode;
+
+
+///---------------------------------------
+/// @name Current Audio Source Controllers
+///---------------------------------------
+
+/**
+ The current time of the current audio source. (read-only)
+ */
+@property (nonatomic, readonly) CMTime currentTime;
+
+/**
+ The duration of the current audio source. (read-only)
+ */
+@property (nonatomic, readonly) CMTime duration;
+
+/**
+ The time range for which the current audio source has the media data readily available. The range provided might be discontinous. (read-only)
+ */
+@property (nonatomic, readonly) CMTimeRange loadedTimeRange;
+
+/**
+ Seek to a specific time (in seconds) in the current audio source.
+ 
  @param index The index of the item in the `urls` array to use for playback.
  */
 - (void)seekToTimeInSeconds:(CGFloat)seconds;
+
+/**
+ Play the current audio source.
+ */
 - (void)play;
+
+/**
+ Pause the current audio source.
+ */
 - (void)pause;
+
+/**
+ Play the previous audio source in the `urls` array.
+ 
+ Behavior will vary based on the 'repeatMode' and `shuffleMode` properties.
+ */
 - (void)skipPrevious;
+
+/**
+ Play the next audio source in the `urls` array.
+ 
+ Behavior will vary based on the 'repeatMode' and `shuffleMode` properties.
+ */
 - (void)skipNext;
 
 @end

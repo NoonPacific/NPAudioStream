@@ -18,7 +18,7 @@
 		A5B2B4071B64F26200555059 /* NPPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B4031B64F26200555059 /* NPPlayerItem.m */; };
 		A5B2B4081B64F26200555059 /* NPQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B2B4051B64F26200555059 /* NPQueuePlayer.m */; };
 		A5B2B40D1B64F2F400555059 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B2B40C1B64F2F400555059 /* AVFoundation.framework */; };
-		A5FF67071B85D4C600FEA719 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FF67061B85D4C600FEA719 /* Storyboard.storyboard */; };
+		A5FF67071B85D4C600FEA719 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FF67061B85D4C600FEA719 /* Root.storyboard */; };
 		A5FF670A1B85D4F100FEA719 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF67091B85D4F100FEA719 /* RootViewController.m */; };
 		A5FF670C1B85D60E00FEA719 /* mixtape-151.json in Resources */ = {isa = PBXBuildFile; fileRef = A5FF670B1B85D60E00FEA719 /* mixtape-151.json */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,7 @@
 		A5B2B4041B64F26200555059 /* NPQueuePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPQueuePlayer.h; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.h; sourceTree = "<absolute>"; };
 		A5B2B4051B64F26200555059 /* NPQueuePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPQueuePlayer.m; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.m; sourceTree = "<absolute>"; };
 		A5B2B40C1B64F2F400555059 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A5FF67061B85D4C600FEA719 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		A5FF67061B85D4C600FEA719 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		A5FF67081B85D4F100FEA719 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		A5FF67091B85D4F100FEA719 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A5FF670B1B85D60E00FEA719 /* mixtape-151.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "mixtape-151.json"; path = "../../Resources/mixtape-151.json"; sourceTree = "<group>"; };
@@ -92,16 +92,6 @@
 			path = ../../..;
 			sourceTree = "<group>";
 		};
-		A5B2A1171B85E53B001E2AC0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A5FF67061B85D4C600FEA719 /* Storyboard.storyboard */,
-				A5FF67081B85D4F100FEA719 /* RootViewController.h */,
-				A5FF67091B85D4F100FEA719 /* RootViewController.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		A5B2A1181B85E555001E2AC0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +124,11 @@
 		A5B2B3C31B64E77200555059 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5FF67061B85D4C600FEA719 /* Root.storyboard */,
 				A5B2B3C61B64E77200555059 /* AppDelegate.h */,
 				A5B2B3C71B64E77200555059 /* AppDelegate.m */,
-				A5B2A1171B85E53B001E2AC0 /* View */,
+				A5FF67081B85D4F100FEA719 /* RootViewController.h */,
+				A5FF67091B85D4F100FEA719 /* RootViewController.m */,
 				A5B2B3C41B64E77200555059 /* Supporting Files */,
 			);
 			name = Classes;
@@ -277,7 +269,7 @@
 				A5FF670C1B85D60E00FEA719 /* mixtape-151.json in Resources */,
 				A5B0DE871B85DD5000BB8D36 /* keys.json in Resources */,
 				A5B2B3CC1B64E77200555059 /* Images.xcassets in Resources */,
-				A5FF67071B85D4C600FEA719 /* Storyboard.storyboard in Resources */,
+				A5FF67071B85D4C600FEA719 /* Root.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

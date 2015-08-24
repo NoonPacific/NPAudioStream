@@ -2,25 +2,25 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:NPAudioStream"
+      location = "container:NPAudioStream"
       name = "NPAudioStream">
       <FileRef
-         location = "group:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.h">
+         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.h">
       </FileRef>
       <FileRef
-         location = "group:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.m">
+         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.m">
       </FileRef>
       <FileRef
-         location = "group:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.h">
+         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.h">
       </FileRef>
       <FileRef
-         location = "group:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.m">
+         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.m">
       </FileRef>
       <FileRef
-         location = "group:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.h">
+         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.h">
       </FileRef>
       <FileRef
-         location = "group:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.m">
+         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.m">
       </FileRef>
       <Group
          location = "container:"

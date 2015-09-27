@@ -49,24 +49,31 @@
         "track_number" : 7,
     },
         {
+        "artist" : "Paul McCartney & Michael Jackson (The Apple Scruffs remix)",
+        "soundcloud_permalink_url" : "http://soundcloud.com/the-apple-scruffs/paul-mccartney-michael-jackson",
+        "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/204782208/stream",
+        "title" : "Say Say Say",
+        "track_number" : 8,
+    },
+        {
         "artist" : "Terence Ryan",
         "soundcloud_permalink_url" : "http://soundcloud.com/3qtr/champain",
         "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/208529181/stream",
         "title" : "Champain",
-        "track_number" : 8,
+        "track_number" : 9,
     },
         {
         "artist" : "Flamingo Pier",
         "soundcloud_permalink_url" : "http://soundcloud.com/flamingopier/fp-waiting-for-you",
         "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/218037886/stream",
         "title" : "Waiting For You",
-        "track_number" : 9,
+        "track_number" : 10,
     },
         {
         "artist" : "Tom of Finland",
         "soundcloud_permalink_url" : "http://soundcloud.com/razor-n-tape/tom-of-finland-summerjam",
         "soundcloud_stream_url" : "https://api.soundcloud.com/tracks/210613646/stream",
         "title" : "Summerjam",
-        "track_number" : 10,
+        "track_number" : 11,
     }
 ]

@@ -211,7 +211,6 @@ NSString *kDurationKey          = @"duration";
             if ([delegate respondsToSelector:@selector(didCompleteAudioStream:)]) {
                 [delegate didCompleteAudioStream:self];
             }
-            
         }
     }
 }
@@ -244,7 +243,6 @@ NSString *kDurationKey          = @"duration";
             if ([delegate respondsToSelector:@selector(didRequestPreviousStreamForAudioStream:)]) {
                 [delegate didRequestPreviousStreamForAudioStream:self];
             }
-            
         }
     }
 }
@@ -289,10 +287,10 @@ NSString *kDurationKey          = @"duration";
                       withSuccess:^(NPPlayerItem *playerItem) {
                           
                           if (!_player) {
+                              
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
                               [[AVAudioSession sharedInstance] setActive:YES error:nil];
 #endif
-                              
                               _player = [[NPQueuePlayer alloc] init];
                               _player.delegate = self;
                               _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
@@ -312,11 +310,8 @@ NSString *kDurationKey          = @"duration";
 #ifdef DEBUG
                           NSLog(@"Failed to load item at URL (%@) with error: %@", url, error.description);
 #endif
-                          
-                          [self skipNext];
-                          
+                          if (error.code == kCFURLErrorFileDoesNotExist) [self skipNext];
                       }];
-
 }
 
 - (void)attemptToQueueUpNextURLAfterURL:(NSURL *)url {
@@ -351,9 +346,7 @@ NSString *kDurationKey          = @"duration";
 #endif
                               
                           }];
-        
     }
-    
 }
 
 - (void)logError:(NSError *)error withAlert:(BOOL)alert {

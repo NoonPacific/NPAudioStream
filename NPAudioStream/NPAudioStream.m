@@ -24,9 +24,9 @@
 #import "NPQueuePlayer.h"
 #import "NPPlayerItem.h"
 
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
-#import "UIKit/UIKit.h"
-#import "UIAlertView+Extensions.h"
+#if TARGET_OS_IOS
+    #import "UIKit/UIKit.h"
+    #import "UIAlertView+Extensions.h"
 #endif
 
 #import "NSURL+Extensions.h"
@@ -59,7 +59,7 @@ NSString *kDurationKey          = @"duration";
     BOOL bufferingToResumePlayback;
     NSTimeInterval bufferedSecondsWhenPlaybackStopped;
     
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS
     UIBackgroundTaskIdentifier bgTaskID;
 #endif
 }
@@ -75,7 +75,7 @@ NSString *kDurationKey          = @"duration";
         _shuffleMode = NPAudioStreamShuffleModeOff;
         assets = [NSMutableArray new];
         
-        #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+        #if TARGET_OS_IOS
         [self subscribeToInterruptionNotification];
         #endif
         
@@ -89,7 +89,7 @@ NSString *kDurationKey          = @"duration";
 
 
 #pragma mark - Audio Interruption
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS
 
 - (void)subscribeToInterruptionNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -288,13 +288,13 @@ NSString *kDurationKey          = @"duration";
                           
                           if (!_player) {
                               
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS
                               [[AVAudioSession sharedInstance] setActive:YES error:nil];
 #endif
                               _player = [[NPQueuePlayer alloc] init];
                               _player.delegate = self;
                               _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS
                               _player.allowsExternalPlayback = NO;
 #endif
                           }
@@ -352,7 +352,7 @@ NSString *kDurationKey          = @"duration";
 - (void)logError:(NSError *)error withAlert:(BOOL)alert {
     
     NSLog(@"Audio Stream Error: %@", error.localizedDescription);
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS
     if (alert) [UIAlertView showOKAlertWithTitle:@"Audio Stream Error" andMessage:error.localizedDescription];
 #endif
 }
@@ -677,7 +677,7 @@ NSString *kDurationKey          = @"duration";
 #pragma mark - Background Task Manager {
 
 - (void)startBackgroundTask {
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS
     if (UIApplication.sharedApplication.applicationState == UIApplicationStateBackground &&
         bgTaskID == UIBackgroundTaskInvalid) {
 
@@ -700,7 +700,7 @@ NSString *kDurationKey          = @"duration";
 }
 
 - (void)endBackgroundTask {
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS
     if (bgTaskID == UIBackgroundTaskInvalid) return;
     
     [[UIApplication sharedApplication] endBackgroundTask:bgTaskID];

@@ -2,7 +2,7 @@
     <img src="http://alexgivens.com/npaudiostream-header.png" alt="NPAudioStream" title="NPAudioStream"
 </p>
 
-NPAudioStream is an easily controllable, robust audio streaming library for iOS and Mac OS X. It was built to interface a playlist of remote audio with standard music UI components.
+NPAudioStream is an easily controllable, robust audio streaming library for iOS, tvOS, and Mac OS X. It was built to interface a playlist of remote audio with standard music UI components.
 
 ## Features
 
@@ -84,7 +84,7 @@ The simplest usage of NPAudioStream involves creating an instance, populating th
 
 ## Example Projects
 
-NPAudioStream includes a workspace with two example projects - one for Mac and one for iOS. These projects showcase the most common patterns to build a music interface.
+NPAudioStream includes a workspace with two example projects - one for Mac and one for iOS (tvOS coming later). These projects showcase the most common patterns to build a music interface.
 
 #### Add your SoundCloud Client ID
 
@@ -92,7 +92,7 @@ These examples use SoundCloud URLs, thus a [SoundCloud Client ID](http://soundcl
 
 ## Device support
 
-NPAudioStream supports iOS 8.0+ and Mac OSX 10.8+
+NPAudioStream supports iOS 8.0+, tvOS 9.0+, and Mac OSX 10.8+.
 
 ## About
 

@@ -217,7 +217,7 @@
     [alert runModal];
 }
 
-- (void)audioStream:(NPAudioStream *)audioStream didLoadTrackAtIndex:(NSUInteger)index {
+- (void)audioStream:(NPAudioStream *)audioStream didLoadTrackAtIndex:(NSInteger)index {
     NSDictionary *track = [tracks objectAtIndex:index];
     self.titleTextField.stringValue = [track objectForKey:@"title"];
     self.artistTextField.stringValue = [track objectForKey:@"artist"];

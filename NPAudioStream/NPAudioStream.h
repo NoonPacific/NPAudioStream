@@ -30,20 +30,20 @@
  Ideally an instance of NPAudioStream is kept as a singular instance within your application (perhaps within a singleton container) to prevent malfunctioning.
  */
 
-typedef NS_ENUM(NSUInteger, NPAudioStreamStatus) {
+typedef NS_ENUM(NSInteger, NPAudioStreamStatus) {
     NPAudioStreamStatusUnknown = 0,
     NPAudioStreamStatusBuffering = 1,
     NPAudioStreamStatusPaused = 2,
     NPAudioStreamStatusPlaying = 3
 };
 
-typedef NS_ENUM(NSUInteger, NPAudioStreamRepeatMode) {
+typedef NS_ENUM(NSInteger, NPAudioStreamRepeatMode) {
     NPAudioStreamRepeatModeOff = 0,
     NPAudioStreamRepeatModeMix = 1,
     NPAudioStreamRepeatModeTrack = 2
 };
 
-typedef NS_ENUM(NSUInteger, NPAudioStreamShuffleMode) {
+typedef NS_ENUM(NSInteger, NPAudioStreamShuffleMode) {
     NPAudioStreamShuffleModeOff = 0,
     NPAudioStreamShuffleModeOn = 1
 };
@@ -63,8 +63,8 @@ typedef NS_ENUM(NSUInteger, NPAudioStreamShuffleMode) {
 - (void)didCompleteAudioStream:(NPAudioStream *)audioStream;
 - (void)didRequestPreviousStreamForAudioStream:(NPAudioStream *)audioStream;
 
-- (void)audioStream:(NPAudioStream *)audioStream didLoadTrackAtIndex:(NSUInteger)index;
-- (void)audioStream:(NPAudioStream *)audioStream didBeginPlaybackForTrackAtIndex:(NSUInteger)index;
+- (void)audioStream:(NPAudioStream *)audioStream didLoadTrackAtIndex:(NSInteger)index;
+- (void)audioStream:(NPAudioStream *)audioStream didBeginPlaybackForTrackAtIndex:(NSInteger)index;
 
 - (void)audioStream:(NPAudioStream *)audioStream didUpdateTrackCurrentTime:(CMTime)currentTime;
 - (void)audioStream:(NPAudioStream *)audioStream didUpdateTrackLoadedTimeRange:(CMTimeRange)loadedTimeRange;
@@ -122,7 +122,7 @@ typedef NS_ENUM(NSUInteger, NPAudioStreamShuffleMode) {
  
  @param index The index of the item in the `urls` array to use for playback.
  */
-- (void)selectIndexForPlayback:(NSUInteger)index;
+- (void)selectIndexForPlayback:(NSInteger)index;
 
 /**
  Cycle to the next repeat mode.

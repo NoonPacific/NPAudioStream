@@ -230,7 +230,7 @@
     [alert show];
 }
 
-- (void)audioStream:(NPAudioStream *)audioStream didLoadTrackAtIndex:(NSUInteger)index {
+- (void)audioStream:(NPAudioStream *)audioStream didLoadTrackAtIndex:(NSInteger)index {
     NSDictionary *track = [tracks objectAtIndex:index];
     self.titleLabel.text = [track objectForKey:@"title"];
     self.artistLabel.text = [track objectForKey:@"artist"];

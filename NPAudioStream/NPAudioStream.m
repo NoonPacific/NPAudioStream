@@ -32,7 +32,7 @@
 #import "NSURL+Extensions.h"
 #import "NSMutableArray+Extensions.h"
 
-NSUInteger static requiredBufferToResume = 4;
+NSInteger static requiredBufferToResume = 4;
 
 /* AVAsset Keys */
 NSString *kTracksKey            = @"tracks";
@@ -101,7 +101,7 @@ NSString *kDurationKey          = @"duration";
 - (void)interruption:(NSNotification *)notification {
     
     NSDictionary *interuptionDict = notification.userInfo;
-    NSUInteger interuptionType = [[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    NSInteger interuptionType = [[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
     
     switch (interuptionType) {
             
@@ -113,7 +113,7 @@ NSString *kDurationKey          = @"duration";
             
         case AVAudioSessionInterruptionTypeEnded: {
             
-            NSUInteger interruptionOption = [[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+            NSInteger interruptionOption = [[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
             
             if (interruptionOption == AVAudioSessionInterruptionOptionShouldResume) {
                 
@@ -132,11 +132,11 @@ NSString *kDurationKey          = @"duration";
 
 #pragma mark - Specified Audio Controls
 
-- (void)selectIndexForPlayback:(NSUInteger)selectedIndex {
+- (void)selectIndexForPlayback:(NSInteger)selectedIndex {
     
     if (_urls == nil || _urls.count == 0 || _urls.count < selectedIndex) return;
     
-    NSUInteger currentItemIndex = [_urls indexOfObject:_currentURL];
+    NSInteger currentItemIndex = [_urls indexOfObject:_currentURL];
     
     if (selectedIndex == currentItemIndex) {
         if (!_player.isPlaying) [_player play];
@@ -190,7 +190,7 @@ NSString *kDurationKey          = @"duration";
 
 - (void)skipNext {
     
-    NSUInteger nextURLIndex = [self.conditionalURLs indexOfObject:_currentURL] + 1;
+    NSInteger nextURLIndex = [self.conditionalURLs indexOfObject:_currentURL] + 1;
     
     if (nextURLIndex < self.conditionalURLs.count) {
         
@@ -222,7 +222,7 @@ NSString *kDurationKey          = @"duration";
         return;
     }
     
-    NSUInteger previousURLIndex = [self.conditionalURLs indexOfObject:_currentURL] - 1;
+    NSInteger previousURLIndex = [self.conditionalURLs indexOfObject:_currentURL] - 1;
     
     if (previousURLIndex < self.conditionalURLs.count) {
         
@@ -324,7 +324,7 @@ NSString *kDurationKey          = @"duration";
     
     if (!prebuffer) return;
     
-    NSUInteger nextURLIndex = [self.conditionalURLs indexOfObject:_currentURL] + 1;
+    NSInteger nextURLIndex = [self.conditionalURLs indexOfObject:_currentURL] + 1;
     
     if (nextURLIndex < self.conditionalURLs.count) {
         
@@ -433,7 +433,7 @@ NSString *kDurationKey          = @"duration";
     _shuffledURLs = [NSArray arrayWithArray:tempShuffleItems];
 }
 
-- (void)generateShuffleArrayWithFirstIndex:(NSUInteger)index {
+- (void)generateShuffleArrayWithFirstIndex:(NSInteger)index {
     NSMutableArray *tempShuffleItems = [NSMutableArray arrayWithArray:_urls];
     [tempShuffleItems shuffleWithIndexForItemAsFirstItem:index];
     _shuffledURLs = [NSArray arrayWithArray:tempShuffleItems];
@@ -478,7 +478,7 @@ NSString *kDurationKey          = @"duration";
     }
     
     if (shuffleMode == NPAudioStreamShuffleModeOn && [_urls containsObject:_currentURL]) {
-        NSUInteger currentURLIndex = [_urls indexOfObject:_currentURL];
+        NSInteger currentURLIndex = [_urls indexOfObject:_currentURL];
         [self generateShuffleArrayWithFirstIndex:currentURLIndex];
     }
 }

@@ -25,6 +25,6 @@
 @interface NSMutableArray (Extensions)
 
 - (void)shuffle;
-- (void)shuffleWithIndexForItemAsFirstItem:(NSUInteger)index;
+- (void)shuffleWithIndexForItemAsFirstItem:(NSInteger)index;
 
 @end

@@ -25,7 +25,7 @@
 @implementation NSMutableArray (Extensions)
 
 - (void)shuffle {
-    NSUInteger count = [self count];
+    NSInteger count = [self count];
     for (int idx=0; idx<count; idx++) {
         NSInteger remainingCount = count - idx;
         NSInteger exchangeIndex = idx + arc4random_uniform((int)remainingCount);
@@ -33,7 +33,7 @@
     }
 }
 
-- (void)shuffleWithIndexForItemAsFirstItem:(NSUInteger)index {
+- (void)shuffleWithIndexForItemAsFirstItem:(NSInteger)index {
     id obj = [self objectAtIndex:index];
     [self shuffle];
     [self exchangeObjectAtIndex:[self indexOfObject:obj] withObjectAtIndex:0];

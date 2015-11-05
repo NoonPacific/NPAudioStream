@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'NPAudioStream'
-  s.version  = '0.1.4'
+  s.version  = '0.1.5'
   s.license  = 'MIT'
   s.summary  = 'NPAudioStream is an easily controllable, robust audio streaming library for iOS, tvOS, and Mac OS X.'
   s.homepage = 'https://github.com/NoonPacific/NPAudioStream'

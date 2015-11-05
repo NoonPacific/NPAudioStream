@@ -630,7 +630,7 @@ NSString *kDurationKey          = @"duration";
     
     [self removeTimeObservers];
     
-    double interval = 0.1f;
+    CMTime interval = CMTimeMake(1, 10);
     
     NPPlayerItem *playerItem = (NPPlayerItem *)_player.currentItem;
     CMTime playerDuration = [playerItem verifiedDuration];
@@ -642,7 +642,7 @@ NSString *kDurationKey          = @"duration";
     interval = 0.5f * duration / width;
     
     __weak typeof(self) bself = self;
-    periodicTimeObserver = [_player addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(interval, NSEC_PER_SEC)
+    periodicTimeObserver = [_player addPeriodicTimeObserverForInterval:interval
                                                                      queue:NULL
                                                                 usingBlock: ^(CMTime time) {
                                                                     [bself periodicUpdater];

@@ -639,7 +639,6 @@ NSString *kDurationKey          = @"duration";
     
     double duration = CMTimeGetSeconds(playerDuration);
     CGFloat width = 1024; // simulated slider width
-    interval = 0.5f * duration / width;
     
     __weak typeof(self) bself = self;
     periodicTimeObserver = [_player addPeriodicTimeObserverForInterval:interval

@@ -32,6 +32,14 @@
 #import "NSURL+Extensions.h"
 #import "NSMutableArray+Extensions.h"
 
+
+NSString * const NPAudioStreamStatusDidChangeNotification = @"com.npaudiostream.statusdidchangenotification";
+NSString * const NPAudioStreamRepeatModeDidChangeNotification = @"com.npaudiostream.repeatmodedidchangenotification";
+NSString * const NPAudioStreamShuffleModeDidChangeNotification = @"com.npaudiostream.shufflemodedidchangenotification";
+NSString * const NPAudioStreamCurrentTimeDidChangeNotification = @"com.npaudiostream.currenttimedidchangenotification";
+NSString * const NPAudioStreamLoadedTimeRangeDidChangeNotification = @"com.npaudiostream.loadedtimerangedidchangenotification";
+
+
 NSInteger static requiredBufferToResume = 4;
 
 /* AVAsset Keys */
@@ -199,7 +207,7 @@ NSString *kDurationKey          = @"duration";
         
     } else {
         
-        if (_repeatMode == NPAudioStreamRepeatModeMix) {
+        if (_repeatMode == NPAudioStreamRepeatModeAll) {
             
             [self generateShuffleArray];
             
@@ -231,7 +239,7 @@ NSString *kDurationKey          = @"duration";
         
     } else {
         
-        if (_repeatMode == NPAudioStreamRepeatModeMix) {
+        if (_repeatMode == NPAudioStreamRepeatModeAll) {
             
             [self generateShuffleArray];
             
@@ -393,7 +401,7 @@ NSString *kDurationKey          = @"duration";
                                                                                           @"Item cannot be played failure reason");
                                      NSDictionary *errorDict = @{NSLocalizedDescriptionKey : localizedDescription,
                                                                  NSLocalizedFailureReasonErrorKey: localizedFailureReason};
-                                     NSError *error = [NSError errorWithDomain:@"ColorMyx" code:0 userInfo:errorDict];
+                                     NSError *error = [NSError errorWithDomain:@"NPAudioStream" code:0 userInfo:errorDict];
                                      
                                      failure(error);
                                      return;
@@ -410,8 +418,8 @@ NSString *kDurationKey          = @"duration";
 
 - (void)incrementRepeatMode {
     if (self.repeatMode == NPAudioStreamRepeatModeOff) {
-        [self setRepeatMode:NPAudioStreamRepeatModeMix];
-    } else if (self.repeatMode == NPAudioStreamRepeatModeMix) {
+        [self setRepeatMode:NPAudioStreamRepeatModeAll];
+    } else if (self.repeatMode == NPAudioStreamRepeatModeAll) {
         [self setRepeatMode:NPAudioStreamRepeatModeTrack];
     } else {
         [self setRepeatMode:NPAudioStreamRepeatModeOff];
@@ -444,9 +452,13 @@ NSString *kDurationKey          = @"duration";
 
 - (void)setStatus:(NPAudioStreamStatus)status {
     _status = status;
+    
     if ([delegate respondsToSelector:@selector(audioStream:didUpdateStatus:)]) {
         [delegate audioStream:self didUpdateStatus:_status];
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NPAudioStreamStatusDidChangeNotification
+                                                        object:nil];
 }
 
 - (void)setUrls:(NSArray *)urls {
@@ -469,19 +481,25 @@ NSString *kDurationKey          = @"duration";
     if ([delegate respondsToSelector:@selector(audioStream:didUpdateRepeatMode:)]) {
         [delegate audioStream:self didUpdateRepeatMode:_repeatMode];
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NPAudioStreamRepeatModeDidChangeNotification
+                                                        object:nil];
 }
 
 - (void)setShuffleMode:(NPAudioStreamShuffleMode)shuffleMode {
     _shuffleMode = shuffleMode;
     
-    if ([delegate respondsToSelector:@selector(audioStream:didUpdateShuffleMode:)]) {
-        [delegate audioStream:self didUpdateShuffleMode:_shuffleMode];
-    }
-    
     if (shuffleMode == NPAudioStreamShuffleModeOn && [_urls containsObject:_currentURL]) {
         NSInteger currentURLIndex = [_urls indexOfObject:_currentURL];
         [self generateShuffleArrayWithFirstIndex:currentURLIndex];
     }
+    
+    if ([delegate respondsToSelector:@selector(audioStream:didUpdateShuffleMode:)]) {
+        [delegate audioStream:self didUpdateShuffleMode:_shuffleMode];
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NPAudioStreamShuffleModeDidChangeNotification
+                                                        object:nil];
 }
 
 - (NSArray *)conditionalURLs {
@@ -532,6 +550,9 @@ NSString *kDurationKey          = @"duration";
     if ([delegate respondsToSelector:@selector(audioStream:didUpdateTrackLoadedTimeRange:)]) {
         [delegate audioStream:self didUpdateTrackLoadedTimeRange:[self loadedTimeRange]];
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NPAudioStreamLoadedTimeRangeDidChangeNotification
+                                                        object:nil];
     
     NSTimeInterval bufferedSeconds = [self bufferedSecondsForPlayerItem:playerItem];
     
@@ -638,9 +659,6 @@ NSString *kDurationKey          = @"duration";
     
     if (CMTIME_IS_INVALID(playerDuration) || CMTIME_COMPARE_INLINE(playerDuration, <=, kCMTimeZero)) return;
     
-    double duration = CMTimeGetSeconds(playerDuration);
-    CGFloat width = 1024; // simulated slider width
-    
     __weak typeof(self) bself = self;
     periodicTimeObserver = [_player addPeriodicTimeObserverForInterval:interval
                                                                      queue:NULL
@@ -672,6 +690,8 @@ NSString *kDurationKey          = @"duration";
         [delegate audioStream:self didUpdateTrackCurrentTime:[self currentTime]];
     }
 
+    [[NSNotificationCenter defaultCenter] postNotificationName:NPAudioStreamCurrentTimeDidChangeNotification
+                                                        object:nil];
 }
 
 #pragma mark - Background Task Manager {

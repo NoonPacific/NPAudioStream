@@ -172,7 +172,7 @@
         case NPAudioStreamRepeatModeOff:
             [self.repeatButton setTitle:@"Repeat Off" forState:UIControlStateNormal];
             break;
-        case NPAudioStreamRepeatModeMix:
+        case NPAudioStreamRepeatModeAll:
             [self.repeatButton setTitle:@"Repeat All" forState:UIControlStateNormal];
             break;
         case NPAudioStreamRepeatModeTrack:
@@ -212,7 +212,7 @@
 
 - (void)didCompleteAudioStream:(NPAudioStream *)audioStream {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Audio Stream Complete"
-                                                    message:@"At this point, we can implement logic to load the next playlist."
+                                                    message:@"At this point, we can implement logic to load the next stream."
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
@@ -222,7 +222,7 @@
 
 - (void)didRequestPreviousStreamForAudioStream:(NPAudioStream *)audioStream {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Previous Audio Stream Requested"
-                                                    message:@"At this point, we can implement logic to load the previous playlist."
+                                                    message:@"At this point, we can implement logic to load the previous stream."
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];

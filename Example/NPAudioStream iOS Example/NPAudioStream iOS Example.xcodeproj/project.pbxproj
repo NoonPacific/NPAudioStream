@@ -36,12 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A5A243301B81BA8B0044E872 /* NSURL+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Extensions.h"; path = "NPAudioStream/Categories/NSURL+Extensions.h"; sourceTree = "<group>"; };
-		A5A243311B81BA8B0044E872 /* NSURL+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Extensions.m"; path = "NPAudioStream/Categories/NSURL+Extensions.m"; sourceTree = "<group>"; };
-		A5A243341B81BAF20044E872 /* NSMutableArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Extensions.h"; path = "NPAudioStream/Categories/NSMutableArray+Extensions.h"; sourceTree = "<group>"; };
-		A5A243351B81BAF20044E872 /* NSMutableArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Extensions.m"; path = "NPAudioStream/Categories/NSMutableArray+Extensions.m"; sourceTree = "<group>"; };
-		A5A2433A1B81BE1E0044E872 /* UIAlertView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Extensions.h"; path = "NPAudioStream/Categories/UIAlertView+Extensions.h"; sourceTree = "<group>"; };
-		A5A2433B1B81BE1E0044E872 /* UIAlertView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Extensions.m"; path = "NPAudioStream/Categories/UIAlertView+Extensions.m"; sourceTree = "<group>"; };
+		A5A243301B81BA8B0044E872 /* NSURL+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Extensions.h"; path = "../../NPAudioStream/Categories/NSURL+Extensions.h"; sourceTree = SOURCE_ROOT; };
+		A5A243311B81BA8B0044E872 /* NSURL+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Extensions.m"; path = "../../NPAudioStream/Categories/NSURL+Extensions.m"; sourceTree = SOURCE_ROOT; };
+		A5A243341B81BAF20044E872 /* NSMutableArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Extensions.h"; path = "../../NPAudioStream/Categories/NSMutableArray+Extensions.h"; sourceTree = SOURCE_ROOT; };
+		A5A243351B81BAF20044E872 /* NSMutableArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Extensions.m"; path = "../../NPAudioStream/Categories/NSMutableArray+Extensions.m"; sourceTree = SOURCE_ROOT; };
+		A5A2433A1B81BE1E0044E872 /* UIAlertView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Extensions.h"; path = "../../NPAudioStream/Categories/UIAlertView+Extensions.h"; sourceTree = SOURCE_ROOT; };
+		A5A2433B1B81BE1E0044E872 /* UIAlertView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Extensions.m"; path = "../../NPAudioStream/Categories/UIAlertView+Extensions.m"; sourceTree = SOURCE_ROOT; };
 		A5A2433D1B81C1800044E872 /* mixtape-151.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "mixtape-151.json"; path = "../../Resources/mixtape-151.json"; sourceTree = "<group>"; };
 		A5A243421B81DA700044E872 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A5A243431B81DA710044E872 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -57,12 +57,12 @@
 		A5B2B3A81B64E6FD00555059 /* NPAudioStream iOS ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NPAudioStream iOS ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B2B3AD1B64E6FD00555059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B2B3AE1B64E6FD00555059 /* NPAudioStream_iOS_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPAudioStream_iOS_ExampleTests.m; sourceTree = "<group>"; };
-		A5B2B3ED1B64F1E700555059 /* NPAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPAudioStream.h; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.h; sourceTree = "<absolute>"; };
-		A5B2B3EE1B64F1E700555059 /* NPAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPAudioStream.m; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.m; sourceTree = "<absolute>"; };
-		A5B2B3EF1B64F1E700555059 /* NPPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPPlayerItem.h; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.h; sourceTree = "<absolute>"; };
-		A5B2B3F01B64F1E700555059 /* NPPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPPlayerItem.m; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.m; sourceTree = "<absolute>"; };
-		A5B2B3F11B64F1E700555059 /* NPQueuePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPQueuePlayer.h; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.h; sourceTree = "<absolute>"; };
-		A5B2B3F21B64F1E700555059 /* NPQueuePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPQueuePlayer.m; path = /Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.m; sourceTree = "<absolute>"; };
+		A5B2B3ED1B64F1E700555059 /* NPAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPAudioStream.h; path = ../../NPAudioStream/NPAudioStream.h; sourceTree = SOURCE_ROOT; };
+		A5B2B3EE1B64F1E700555059 /* NPAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPAudioStream.m; path = ../../NPAudioStream/NPAudioStream.m; sourceTree = SOURCE_ROOT; };
+		A5B2B3EF1B64F1E700555059 /* NPPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPPlayerItem.h; path = ../../NPAudioStream/NPPlayerItem.h; sourceTree = SOURCE_ROOT; };
+		A5B2B3F01B64F1E700555059 /* NPPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPPlayerItem.m; path = ../../NPAudioStream/NPPlayerItem.m; sourceTree = SOURCE_ROOT; };
+		A5B2B3F11B64F1E700555059 /* NPQueuePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPQueuePlayer.h; path = ../../NPAudioStream/NPQueuePlayer.h; sourceTree = SOURCE_ROOT; };
+		A5B2B3F21B64F1E700555059 /* NPQueuePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPQueuePlayer.m; path = ../../NPAudioStream/NPQueuePlayer.m; sourceTree = SOURCE_ROOT; };
 		A5B2B40A1B64F2E700555059 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -112,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B2B38E1B64E6FD00555059 /* Classes */,
+				A5B2B38F1B64E6FD00555059 /* Supporting Files */,
 				A5A2432F1B81B3720044E872 /* Vendor */,
 				A5B2B3AB1B64E6FD00555059 /* NPAudioStream iOS ExampleTests */,
 				A5B2B40E1B64F30100555059 /* Frameworks */,
@@ -131,12 +132,10 @@
 		A5B2B38E1B64E6FD00555059 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A5B2B39C1B64E6FD00555059 /* Main.storyboard */,
 				A5B2B3931B64E6FD00555059 /* AppDelegate.h */,
 				A5B2B3941B64E6FD00555059 /* AppDelegate.m */,
 				A5A243421B81DA700044E872 /* MainViewController.h */,
 				A5A243431B81DA710044E872 /* MainViewController.m */,
-				A5B2B38F1B64E6FD00555059 /* Supporting Files */,
 			);
 			name = Classes;
 			path = "NPAudioStream iOS Example";
@@ -145,14 +144,16 @@
 		A5B2B38F1B64E6FD00555059 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A5B2B3A11B64E6FD00555059 /* LaunchScreen.xib */,
+				A5B2B39C1B64E6FD00555059 /* Main.storyboard */,
 				A5B0DE841B85DCB100BB8D36 /* keys.json */,
 				A5A2433D1B81C1800044E872 /* mixtape-151.json */,
 				A5B2B39F1B64E6FD00555059 /* Images.xcassets */,
-				A5B2B3A11B64E6FD00555059 /* LaunchScreen.xib */,
 				A5B2B3901B64E6FD00555059 /* Info.plist */,
 				A5B2B3911B64E6FD00555059 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = "NPAudioStream iOS Example";
 			sourceTree = "<group>";
 		};
 		A5B2B3AB1B64E6FD00555059 /* NPAudioStream iOS ExampleTests */ = {

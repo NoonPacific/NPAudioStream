@@ -5,22 +5,22 @@
       location = "container:NPAudioStream"
       name = "NPAudioStream">
       <FileRef
-         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.h">
+         location = "container:NPAudioStream/NPAudioStream.h">
       </FileRef>
       <FileRef
-         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPAudioStream.m">
+         location = "container:NPAudioStream/NPAudioStream.m">
       </FileRef>
       <FileRef
-         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.h">
+         location = "container:NPAudioStream/NPPlayerItem.h">
       </FileRef>
       <FileRef
-         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPPlayerItem.m">
+         location = "container:NPAudioStream/NPPlayerItem.m">
       </FileRef>
       <FileRef
-         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.h">
+         location = "container:NPAudioStream/NPQueuePlayer.h">
       </FileRef>
       <FileRef
-         location = "container:/Users/alexandergivens/Developer/NPAudioStream/NPAudioStream/NPQueuePlayer.m">
+         location = "container:NPAudioStream/NPQueuePlayer.m">
       </FileRef>
       <Group
          location = "container:"

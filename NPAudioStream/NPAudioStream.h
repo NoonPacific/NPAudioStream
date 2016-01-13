@@ -22,6 +22,14 @@
 
 #import <AVFoundation/AVFoundation.h>
 
+
+extern NSString * const NPAudioStreamStatusDidChangeNotification;
+extern NSString * const NPAudioStreamRepeatModeDidChangeNotification;
+extern NSString * const NPAudioStreamShuffleModeDidChangeNotification;
+extern NSString * const NPAudioStreamCurrentTimeDidChangeNotification;
+extern NSString * const NPAudioStreamLoadedTimeRangeDidChangeNotification;
+
+
 @class NPAudioStream;
 
 /**
@@ -39,7 +47,7 @@ typedef NS_ENUM(NSInteger, NPAudioStreamStatus) {
 
 typedef NS_ENUM(NSInteger, NPAudioStreamRepeatMode) {
     NPAudioStreamRepeatModeOff = 0,
-    NPAudioStreamRepeatModeMix = 1,
+    NPAudioStreamRepeatModeAll = 1,
     NPAudioStreamRepeatModeTrack = 2
 };
 

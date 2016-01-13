@@ -72,7 +72,7 @@ NSString *kDurationKey          = @"duration";
 #endif
 }
 
-@synthesize delegate;
+@synthesize delegate, dataSource;
 
 - (id)init {
     self = [super init];
@@ -194,6 +194,14 @@ NSString *kDurationKey          = @"duration";
 - (void)pause {
     bufferingToResumePlayback = NO;
     [_player pause];
+}
+
+- (void)togglePlayPause {
+    if (self.status == NPAudioStreamStatusPlaying) {
+        [self pause];
+    } else if (self.status == NPAudioStreamStatusPaused) {
+        [self play];
+    }
 }
 
 - (void)skipNext {
@@ -327,8 +335,8 @@ NSString *kDurationKey          = @"duration";
     
     BOOL prebuffer = YES;
     
-    if ([delegate respondsToSelector:@selector(shouldPrebufferNextTrackForAudioStream:)]) {
-        prebuffer = [delegate shouldPrebufferNextTrackForAudioStream:self];
+    if ([dataSource respondsToSelector:@selector(shouldPrebufferNextTrackForAudioStream:)]) {
+        prebuffer = [dataSource shouldPrebufferNextTrackForAudioStream:self];
     }
     
     if (!prebuffer) return;
@@ -420,7 +428,7 @@ NSString *kDurationKey          = @"duration";
     if (self.repeatMode == NPAudioStreamRepeatModeOff) {
         [self setRepeatMode:NPAudioStreamRepeatModeAll];
     } else if (self.repeatMode == NPAudioStreamRepeatModeAll) {
-        [self setRepeatMode:NPAudioStreamRepeatModeTrack];
+        [self setRepeatMode:NPAudioStreamRepeatModeOne];
     } else {
         [self setRepeatMode:NPAudioStreamRepeatModeOff];
     }
@@ -513,10 +521,8 @@ NSString *kDurationKey          = @"duration";
 }
 
 - (CMTime)duration {
-    
     NPPlayerItem *currentItem = (NPPlayerItem *)_player.currentItem;
     return currentItem.verifiedDuration;
-    
 }
 
 - (CMTimeRange)loadedTimeRange {
@@ -605,7 +611,7 @@ NSString *kDurationKey          = @"duration";
     
     if (playerItem != _player.currentItem) return;
         
-    if (_repeatMode == NPAudioStreamRepeatModeTrack) {
+    if (_repeatMode == NPAudioStreamRepeatModeOne) {
         if (_player.currentItem != nil) [_player.currentItem seekToTime:kCMTimeZero];
         [_player play];
         return;

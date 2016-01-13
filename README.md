@@ -2,18 +2,18 @@
     <img src="http://alexgivens.com/npaudiostream-header.png" alt="NPAudioStream" title="NPAudioStream"
 </p>
 
-NPAudioStream is an easily controllable, robust audio streaming library for iOS, tvOS, and Mac OS X. It was built to interface a playlist of remote audio with standard music UI components.
+NPAudioStream is a lightweight Objective-C library used to continuously stream a playlist of audio on iOS, tvOS, and Mac OS X. NPAudioStream excels at maintaining audio playback over a poor network connection.
 
 ## Features
 
-- Audio controls represent the most common music interface behaviors (e.g. play, pause, skip, seek, shuffle, etc.)
-- Array/index style of url management elegantly binds to table view display and selection commands
-- Optionally prebuffer the next track, even when shuffling
-- Detects when a source is not streamable and automatically skips to the next song in the queue
-- Repeat functionality supports single, all, or off
-- Shuffle functionality mimics iPod behavior
+- Audio controls represent the most common music interface behaviors (e.g. play, pause, skip, seek, shuffle).
+- Array/index style of url management elegantly binds to table view selection.
+- Optionally prebuffer the next track, even when shuffling.
+- Detect when a source is not streamable and automatically skip to the next song in the stream.
+- Repeat functionality supports one track or the whole stream.
+- Shuffle functionality mimics iPod behavior.
 
-#### iOS Specific
+#### iOS only
 
 - Manages background tasks to ensure your app remains active during network interruptions
 - Pauses and resumes playback in response to a phone call interruption
@@ -24,13 +24,13 @@ NPAudioStream is an easily controllable, robust audio streaming library for iOS,
 
 The recommended method of installation is through [CocoaPods](http://cocoapods.org). Add the following line to your Podfile, then run `pod install`.
 
-For iOS, be sure to [add support for background audio](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW26).
-
 #### Podfile
 
 ```ruby
 pod 'NPAudioStream', :git => 'https://github.com/NoonPacific/NPAudioStream.git'
 ```
+
+For iOS, be sure to [add support for background audio](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW26) as well.
 
 ### Manual Installation
 
@@ -39,9 +39,9 @@ pod 'NPAudioStream', :git => 'https://github.com/NoonPacific/NPAudioStream.git'
 3. In your Xcode project, navigate to *Target > Build Phases > Link Binary with Libraries* and add the `AVFoundation` framework.
 4. For iOS, be sure to [add support for background audio](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW26).
 
-## Basic Code Example
+## Basic Example
 
-The simplest usage of NPAudioStream involves creating an instance, populating the `urls` property, then selecting an index for playback. NPAudioStream was built with the intention of streaming [SoundCloud](https://soundcloud.com) audio, so the following example demonstrates how to stream a playlist of SoundCloud URLs on iOS.
+The simplest usage of NPAudioStream involves creating an instance, populating the `urls` property, then selecting an index for playback. NPAudioStream was built with the intention of streaming [SoundCloud](https://soundcloud.com) audio, so the following example demonstrates how to stream an array of SoundCloud URLs on iOS.
 
 **Note: Be sure to replace `YOUR_CLIENT_ID` with your own [SoundCloud Client ID](http://soundcloud.com/you/apps_).**
 
@@ -92,7 +92,7 @@ These examples use SoundCloud URLs, thus a [SoundCloud Client ID](http://soundcl
 
 ## Device support
 
-NPAudioStream supports iOS 8.0+, tvOS 9.0+, and Mac OSX 10.8+.
+NPAudioStream supports iOS 8.0+, tvOS 9.0+, and Mac OS X 10.8+.
 
 ## About
 

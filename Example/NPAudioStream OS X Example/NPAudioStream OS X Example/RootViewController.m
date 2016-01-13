@@ -23,7 +23,7 @@
 #import "RootViewController.h"
 #import "NPAudioStream.h"
 
-@interface RootViewController () <NPAudioStreamDelegate, NSTableViewDataSource, NSTableViewDelegate>
+@interface RootViewController () <NPAudioStreamDelegate, NPAudioStreamDataSource, NSTableViewDataSource, NSTableViewDelegate>
 
 @property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSTextField *titleTextField;
@@ -163,11 +163,11 @@
         case NPAudioStreamRepeatModeOff:
             [self.repeatButton setTitle:@"Repeat Off"];
             break;
-        case NPAudioStreamRepeatModeMix:
-            [self.repeatButton setTitle:@"Repeat Mix"];
+        case NPAudioStreamRepeatModeAll:
+            [self.repeatButton setTitle:@"Repeat All"];
             break;
-        case NPAudioStreamRepeatModeTrack:
-            [self.repeatButton setTitle:@"Repeat Track"];
+        case NPAudioStreamRepeatModeOne:
+            [self.repeatButton setTitle:@"Repeat One"];
             break;
         default:
             break;
@@ -237,6 +237,8 @@
 - (void)audioStream:(NPAudioStream *)audioStream didFinishSeekingToTime:(CMTime)time {
     // TODO: Seek slider control
 }
+
+#pragma mark - Audio Stream Data Source
 
 - (BOOL)shouldPrebufferNextTrackForAudioStream:(NPAudioStream *)audioStream {
     return YES;

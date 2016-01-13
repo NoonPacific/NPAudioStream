@@ -23,7 +23,7 @@
 #import "MainViewController.h"
 #import "NPAudioStream.h"
 
-@interface MainViewController () <NPAudioStreamDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MainViewController () <NPAudioStreamDelegate, NPAudioStreamDataSource, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -109,7 +109,7 @@
     if (sender == self.previousButton)
         [audioStream skipPrevious];
     else if (sender == self.playPauseButton)
-        [self togglePlayPause];
+        [audioStream togglePlayPause];
     else if (sender == self.nextButton)
         [audioStream skipNext];
     else if (sender == self.shuffleButton)
@@ -122,16 +122,6 @@
 
 - (IBAction)didChangeValueForSeekSlider:(UISlider *)sender {
     // TODO: Seek slider control
-}
-
-#pragma mark - Custom Audio Stream Controllers
-
-- (void)togglePlayPause {
-    if (audioStream.status == NPAudioStreamStatusPlaying) {
-        [audioStream pause];
-    } else if (audioStream.status == NPAudioStreamStatusPaused) {
-        [audioStream play];
-    }
 }
 
 #pragma mark - Interface Controllers
@@ -175,7 +165,7 @@
         case NPAudioStreamRepeatModeAll:
             [self.repeatButton setTitle:@"Repeat All" forState:UIControlStateNormal];
             break;
-        case NPAudioStreamRepeatModeTrack:
+        case NPAudioStreamRepeatModeOne:
             [self.repeatButton setTitle:@"Repeat One" forState:UIControlStateNormal];
             break;
         default:
@@ -250,6 +240,8 @@
 - (void)audioStream:(NPAudioStream *)audioStream didFinishSeekingToTime:(CMTime)time {
     // TODO: Seek slider control
 }
+
+#pragma mark - Audio Stream Data Source
 
 - (BOOL)shouldPrebufferNextTrackForAudioStream:(NPAudioStream *)audioStream {
     return YES;

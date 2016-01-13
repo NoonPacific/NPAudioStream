@@ -178,10 +178,10 @@
 			children = (
 				A5B2B3ED1B64F1E700555059 /* NPAudioStream.h */,
 				A5B2B3EE1B64F1E700555059 /* NPAudioStream.m */,
-				A5B2B3EF1B64F1E700555059 /* NPPlayerItem.h */,
-				A5B2B3F01B64F1E700555059 /* NPPlayerItem.m */,
 				A5B2B3F11B64F1E700555059 /* NPQueuePlayer.h */,
 				A5B2B3F21B64F1E700555059 /* NPQueuePlayer.m */,
+				A5B2B3EF1B64F1E700555059 /* NPPlayerItem.h */,
+				A5B2B3F01B64F1E700555059 /* NPPlayerItem.m */,
 				A5A243321B81BA8B0044E872 /* Categories */,
 			);
 			name = NPAudioStream;

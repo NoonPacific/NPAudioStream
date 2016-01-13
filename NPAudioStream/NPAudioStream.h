@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, NPAudioStreamStatus) {
 typedef NS_ENUM(NSInteger, NPAudioStreamRepeatMode) {
     NPAudioStreamRepeatModeOff = 0,
     NPAudioStreamRepeatModeAll = 1,
-    NPAudioStreamRepeatModeTrack = 2
+    NPAudioStreamRepeatModeOne = 2
 };
 
 typedef NS_ENUM(NSInteger, NPAudioStreamShuffleMode) {
@@ -78,17 +78,23 @@ typedef NS_ENUM(NSInteger, NPAudioStreamShuffleMode) {
 - (void)audioStream:(NPAudioStream *)audioStream didUpdateTrackLoadedTimeRange:(CMTimeRange)loadedTimeRange;
 - (void)audioStream:(NPAudioStream *)audioStream didFinishSeekingToTime:(CMTime)time;
 
-// TODO: Designate a separate data source protocol for this
+@end
+
+
+@protocol NPAudioStreamDataSource <NSObject>
+
+@optional
+
 - (BOOL)shouldPrebufferNextTrackForAudioStream:(NPAudioStream *)audioStream;
 
 @end
-
 
 /**
  An instance of NPAudioStream is a means for playing and controlling an array of remote audio sources.
  */
 @interface NPAudioStream : NSObject {
     __weak id <NPAudioStreamDelegate> delegate;
+    __weak id <NPAudioStreamDataSource> dataSource;
 }
 
 ///-------------------------
@@ -101,6 +107,13 @@ typedef NS_ENUM(NSInteger, NPAudioStreamShuffleMode) {
  The delegate must adopt the NPAudioStreamDelegate protocol. The delegate is not retained.
  */
 @property (nonatomic, weak) id <NPAudioStreamDelegate> delegate;
+
+/**
+ The object that acts as the delegate of the audio stream.
+ 
+ The delegate must adopt the NPAudioStreamDelegate protocol. The delegate is not retained.
+ */
+@property (nonatomic, weak) id <NPAudioStreamDataSource> dataSource;
 
 /**
  Returns the status of the audio stream. (read-only)
@@ -178,6 +191,11 @@ typedef NS_ENUM(NSInteger, NPAudioStreamShuffleMode) {
  Pause the current audio source.
  */
 - (void)pause;
+
+/**
+ Play the current audio source if it is currently paused, and vica versa.
+ */
+- (void)togglePlayPause;
 
 /**
  Play the previous audio source in the `urls` array.

@@ -1,5 +1,5 @@
 <p align="center" >
-    <img src="http://alexgivens.com/npaudiostream-header.png" alt="NPAudioStream" title="NPAudioStream"
+    <img src="http://alexgivens.com/img/npaudiostream-header.png" alt="NPAudioStream" title="NPAudioStream"
 </p>
 
 NPAudioStream is a lightweight Objective-C library used to continuously stream a playlist of audio on iOS, tvOS, and Mac OS X. NPAudioStream excels at maintaining audio playback over a poor network connection.

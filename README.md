@@ -2,7 +2,12 @@
     <img src="http://alexgivens.com/img/npaudiostream-header.png" alt="NPAudioStream" title="NPAudioStream"
 </p>
 
-NPAudioStream is a lightweight Objective-C library used to continuously stream a playlist of audio on iOS, tvOS, and Mac OS X. NPAudioStream excels at maintaining audio playback over a poor network connection.
+[![Version](https://img.shields.io/cocoapods/v/WhiteLabel.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
+[![License](https://img.shields.io/cocoapods/l/WhiteLabel.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
+[![Platform](https://img.shields.io/cocoapods/p/WhiteLabel.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
+[![Twitter](https://img.shields.io/badge/twitter-%40NoonPacific-blue.svg)](http://twitter.com/NoonPacific)
+
+NPAudioStream is a lightweight Objective-C library to continuously stream a playlist of audio on iOS, tvOS, and macOS. NPAudioStream excels at maintaining audio playback over a poor network connection.
 
 ## Features
 
@@ -27,7 +32,7 @@ The recommended method of installation is through [CocoaPods](http://cocoapods.o
 #### Podfile
 
 ```ruby
-pod 'NPAudioStream', :git => 'https://github.com/NoonPacific/NPAudioStream.git'
+pod 'NPAudioStream', '~> 1.0'
 ```
 
 For iOS, be sure to [add support for background audio](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW26) as well.
@@ -84,7 +89,7 @@ The simplest usage of NPAudioStream involves creating an instance, populating th
 
 ## Example Projects
 
-NPAudioStream includes a workspace with two example projects - one for Mac and one for iOS (tvOS coming later). These projects showcase the most common patterns to build a music interface.
+NPAudioStream includes a workspace with two example projects - one for macOS and one for iOS (tvOS coming later). These projects showcase the most common patterns to build a music interface.
 
 #### Add your SoundCloud Client ID
 
@@ -92,7 +97,7 @@ These examples use SoundCloud URLs, thus a [SoundCloud Client ID](http://soundcl
 
 ## Device support
 
-NPAudioStream supports iOS 8.0+, tvOS 9.0+, and Mac OS X 10.8+.
+NPAudioStream supports iOS 8.0+, tvOS 9.0+, and macOS 10.8+.
 
 ## About
 

@@ -2,9 +2,9 @@
     <img src="http://alexgivens.com/img/npaudiostream-header.png" alt="NPAudioStream" title="NPAudioStream"
 </p>
 
-[![Version](https://img.shields.io/cocoapods/v/WhiteLabel.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
-[![License](https://img.shields.io/cocoapods/l/WhiteLabel.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
-[![Platform](https://img.shields.io/cocoapods/p/WhiteLabel.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
+[![Version](https://img.shields.io/cocoapods/v/NPAudioStream.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
+[![License](https://img.shields.io/cocoapods/l/NPAudioStream.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
+[![Platform](https://img.shields.io/cocoapods/p/NPAudioStream.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
 [![Twitter](https://img.shields.io/badge/twitter-%40NoonPacific-blue.svg)](http://twitter.com/NoonPacific)
 
 NPAudioStream is a lightweight Objective-C library to continuously stream a playlist of audio on iOS, tvOS, and macOS. NPAudioStream excels at maintaining audio playback over a poor network connection.

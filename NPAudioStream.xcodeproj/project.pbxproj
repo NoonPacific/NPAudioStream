@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		FE6DB2DA1FC3A0AE00C7AF86 /* NPAudioStream.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6DB2D81FC3A0AE00C7AF86 /* NPAudioStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE6DB2E51FC3A12C00C7AF86 /* NPAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6DB2E01FC3A12C00C7AF86 /* NPAudioStream.m */; };
-		FE6DB2E61FC3A12C00C7AF86 /* NPPlayerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6DB2E11FC3A12C00C7AF86 /* NPPlayerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6DB2E61FC3A12C00C7AF86 /* NPPlayerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6DB2E11FC3A12C00C7AF86 /* NPPlayerItem.h */; };
 		FE6DB2E71FC3A12C00C7AF86 /* NPPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6DB2E21FC3A12C00C7AF86 /* NPPlayerItem.m */; };
 		FE6DB2E81FC3A12C00C7AF86 /* NPQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6DB2E31FC3A12C00C7AF86 /* NPQueuePlayer.m */; };
-		FE6DB2E91FC3A12C00C7AF86 /* NPQueuePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6DB2E41FC3A12C00C7AF86 /* NPQueuePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6DB2E91FC3A12C00C7AF86 /* NPQueuePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6DB2E41FC3A12C00C7AF86 /* NPQueuePlayer.h */; };
 		FE6DB2F21FC3A15200C7AF86 /* NSMutableArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6DB2EC1FC3A15200C7AF86 /* NSMutableArray+Extensions.h */; };
 		FE6DB2F31FC3A15200C7AF86 /* NSMutableArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6DB2ED1FC3A15200C7AF86 /* NSMutableArray+Extensions.m */; };
 		FE6DB2F41FC3A15200C7AF86 /* NSURL+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6DB2EE1FC3A15200C7AF86 /* NSURL+Extensions.h */; };

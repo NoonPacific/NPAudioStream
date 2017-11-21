@@ -1,50 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:NPAudioStream"
-      name = "NPAudioStream">
-      <FileRef
-         location = "container:NPAudioStream/NPAudioStream.h">
-      </FileRef>
-      <FileRef
-         location = "container:NPAudioStream/NPAudioStream.m">
-      </FileRef>
-      <FileRef
-         location = "container:NPAudioStream/NPPlayerItem.h">
-      </FileRef>
-      <FileRef
-         location = "container:NPAudioStream/NPPlayerItem.m">
-      </FileRef>
-      <FileRef
-         location = "container:NPAudioStream/NPQueuePlayer.h">
-      </FileRef>
-      <FileRef
-         location = "container:NPAudioStream/NPQueuePlayer.m">
-      </FileRef>
-      <Group
-         location = "container:"
-         name = "Categories">
-         <FileRef
-            location = "group:NPAudioStream/Categories/NSURL+Extensions.h">
-         </FileRef>
-         <FileRef
-            location = "group:NPAudioStream/Categories/NSURL+Extensions.m">
-         </FileRef>
-         <FileRef
-            location = "group:NPAudioStream/Categories/NSMutableArray+Extensions.h">
-         </FileRef>
-         <FileRef
-            location = "group:NPAudioStream/Categories/NSMutableArray+Extensions.m">
-         </FileRef>
-         <FileRef
-            location = "group:NPAudioStream/Categories/UIAlertView+Extensions.h">
-         </FileRef>
-         <FileRef
-            location = "group:NPAudioStream/Categories/UIAlertView+Extensions.m">
-         </FileRef>
-      </Group>
-   </Group>
+   <FileRef
+      location = "group:NPAudioStream.xcodeproj">
+   </FileRef>
    <FileRef
       location = "group:Example/NPAudioStream iOS Example/NPAudioStream iOS Example.xcodeproj">
    </FileRef>

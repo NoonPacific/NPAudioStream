@@ -1,4 +1,4 @@
-// UIAlertView+Extensions.h
+// UIAlertController+Extensions.h
 //
 // Copyright (c) 2015 Noon Pacific (http://noonpacific.com)
 //
@@ -20,10 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#if TARGET_OS_IOS || TARGET_OS_WATCHOS
+#import "UIAlertController+Extensions.h"
 
-@interface UIAlertView (Extensions)
+@implementation UIAlertController (Extensions)
 
-+ (void)showOKAlertWithTitle:(NSString *)title andMessage:(NSString *)message;
++ (void)showOKAlertWithTitle:(NSString *)title andMessage:(NSString *)message fromViewController:(UIViewController *)viewController {
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [controller addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    [viewController presentViewController:controller animated:YES completion:nil];
+}
 
 @end
+#endif

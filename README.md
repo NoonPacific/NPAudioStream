@@ -2,6 +2,7 @@
     <img src="http://alexgivens.com/img/npaudiostream-header.png" alt="NPAudioStream" title="NPAudioStream"
 </p>
 
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/NPAudioStream.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
 [![License](https://img.shields.io/cocoapods/l/NPAudioStream.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
 [![Platform](https://img.shields.io/cocoapods/p/NPAudioStream.svg?style=flat)](http://cocoapods.org/pods/NPAudioStream)
@@ -36,6 +37,25 @@ pod 'NPAudioStream', '~> 1.0'
 ```
 
 For iOS, be sure to [add support for background audio](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW26) as well.
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate NPAudioStream into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "NoonPacific/NPAudioStream" ~> 1.1
+```
+
+Run `carthage update` to build the framework and drag the built `NPAudioStream.framework` into your Xcode project.
 
 ### Manual Installation
 

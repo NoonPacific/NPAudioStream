@@ -178,7 +178,7 @@ typedef NS_ENUM(NSInteger, NPAudioStreamShuffleMode) {
 /**
  Seek to a specific time (in seconds) in the current audio source.
  
- @param index The index of the item in the `urls` array to use for playback.
+ @param seconds The index of the item in the `urls` array to use for playback.
  */
 - (void)seekToTimeInSeconds:(CGFloat)seconds;
 

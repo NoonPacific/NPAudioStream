@@ -26,7 +26,7 @@
 
 #if TARGET_OS_IOS
     #import "UIKit/UIKit.h"
-    #import "UIAlertView+Extensions.h"
+    #import "UIAlertController+Extensions.h"
 #endif
 
 #import "NSURL+Extensions.h"
@@ -234,7 +234,7 @@ NSString *kDurationKey          = @"duration";
 - (void)skipPrevious {
     
     if (CMTIME_COMPARE_INLINE(_player.currentTime, >, CMTimeMake(5.0, 1.0))) {
-        [_player.currentItem seekToTime:kCMTimeZero];
+        [_player.currentItem seekToTime:kCMTimeZero completionHandler:nil];
         return;
     }
     
@@ -370,7 +370,8 @@ NSString *kDurationKey          = @"duration";
     
     NSLog(@"Audio Stream Error: %@", error.localizedDescription);
 #if TARGET_OS_IOS
-    if (alert) [UIAlertView showOKAlertWithTitle:@"Audio Stream Error" andMessage:error.localizedDescription];
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if (alert) [UIAlertController showOKAlertWithTitle:@"Audio Stream Error" andMessage:error.localizedDescription fromViewController:rootViewController];
 #endif
 }
 
@@ -612,7 +613,7 @@ NSString *kDurationKey          = @"duration";
     if (playerItem != _player.currentItem) return;
         
     if (_repeatMode == NPAudioStreamRepeatModeOne) {
-        if (_player.currentItem != nil) [_player.currentItem seekToTime:kCMTimeZero];
+        if (_player.currentItem != nil) [_player.currentItem seekToTime:kCMTimeZero completionHandler:nil];
         [_player play];
         return;
     }

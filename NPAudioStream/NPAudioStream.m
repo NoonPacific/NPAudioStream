@@ -167,7 +167,7 @@ NSString *kDurationKey          = @"duration";
     
     [self removeTimeObservers];
     
-    int32_t timeScale = _player.currentItem.asset.duration.timescale;
+    int32_t timeScale = _player.currentItem.asset.duration.timescale ? _player.currentItem.asset.duration.timescale : 1;
     CMTime time = CMTimeMakeWithSeconds(seconds, timeScale);
     
     [_player seekToTime:time

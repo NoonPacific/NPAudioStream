@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'NPAudioStream/*.h'
   s.source_files = 'NPAudioStream/NPAudioStream.{h,m}', 'NPAudioStream/NPQueuePlayer.{h,m}', 'NPAudioStream/NPPlayerItem.{h,m}', 'NPAudioStream/Categories/NSURL+Extensions.{h,m}', 'NPAudioStream/Categories/NSMutableArray+Extensions.{h,m}'
-  s.ios.source_files = 'NPAudioStream/Categories/UIAlertView+Extensions.{h,m}'
+  s.ios.source_files = 'NPAudioStream/Categories/*.{h,m}'
   s.frameworks = 'AVFoundation'
 end

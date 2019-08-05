@@ -175,10 +175,10 @@ NSString *kDurationKey          = @"duration";
           
           [self initTimeObservers];
           
-          _player.rate = restoreAfterScrubbingRate;
+          self->_player.rate = restoreAfterScrubbingRate;
           
-          if ([delegate respondsToSelector:@selector(audioStream:didFinishSeekingToTime:)]) {
-              [delegate audioStream:self didFinishSeekingToTime:time];
+          if ([self->delegate respondsToSelector:@selector(audioStream:didFinishSeekingToTime:)]) {
+              [self->delegate audioStream:self didFinishSeekingToTime:time];
           }
           
       }];
@@ -302,24 +302,24 @@ NSString *kDurationKey          = @"duration";
     [self preparePlayerItemForURL:url
                       withSuccess:^(NPPlayerItem *playerItem) {
                           
-                          if (!_player) {
+                          if (!self->_player) {
                               
 #if TARGET_OS_IOS || TARGET_OS_TV
                               [[AVAudioSession sharedInstance] setActive:YES error:nil];
                               [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 #endif
-                              _player = [[NPQueuePlayer alloc] init];
-                              _player.delegate = self;
-                              _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+                              self->_player = [[NPQueuePlayer alloc] init];
+                              self->_player.delegate = self;
+                              self->_player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
 #if TARGET_OS_IOS
-                              _player.allowsExternalPlayback = NO;
+                              self->_player.allowsExternalPlayback = NO;
 #endif
                           }
                           
                           [self initTimeObservers];
                           [playerItem setDelegate:self];
                           
-                          [_player replaceCurrentItemWithPlayerItem:playerItem];
+                          [self->_player replaceCurrentItemWithPlayerItem:playerItem];
                           [self attemptToQueueUpNextURLAfterURL:url];
                           
                       } failure:^(NSError *error) {
@@ -352,8 +352,8 @@ NSString *kDurationKey          = @"duration";
                               
                               [playerItem setDelegate:self];
                               
-                              if ([_player canInsertItem:playerItem afterItem:_player.currentItem]) {
-                                  [_player insertItem:playerItem afterItem:_player.currentItem];
+                              if ([self->_player canInsertItem:playerItem afterItem:self->_player.currentItem]) {
+                                  [self->_player insertItem:playerItem afterItem:self->_player.currentItem];
                               }
                               
                           } failure:^(NSError *error) {
@@ -388,7 +388,7 @@ NSString *kDurationKey          = @"duration";
                          completionHandler: ^{
                              dispatch_async( dispatch_get_main_queue(), ^{
                                  
-                                 [assets removeObject:asset];
+                                 [self->assets removeObject:asset];
                                  
                                  for (NSString *key in requestedKeys) {
                                      
